@@ -3,7 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .body {
@@ -11,7 +11,7 @@
 }
 
 .navbar {
-  background: #adc7ff;
+  background: white;
   height: 80px;
   display: flex;
   justify-content: left;
@@ -21,6 +21,7 @@
   position: sticky;
   top: 0;
   z-index: 999;
+  border-bottom: 2px solid dodgerblue;
 }
 
 .navbar__container {
@@ -45,7 +46,7 @@
 
 #navbar__logo {
   background-color: #ff8177;
-  background-image: linear-gradient(to top, #2508ff 0%, #07ffee 100%);
+  background-image: linear-gradient(to top, #1e00ff 0%, #6cbdff 100%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -59,9 +60,7 @@
   font-size: 2rem;
 }
 
-.fa-gem {
-  margin-right: 0.5rem;
-}
+
 
 .navbar__menu {
   display: flex;
@@ -75,12 +74,12 @@
 }
 
 .navbar__links {
-  color: white;
+  color: gray;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  padding: 0 1rem;
+  padding: 0 2rem;
   height: 100%;
 }
 
@@ -158,7 +157,7 @@
 }
 
 #selfie {
-  justify-self: center;
+
   border-radius: 10px;
   margin: 6rem;
   margin-top: 0rem;
@@ -177,6 +176,7 @@
   transition: all 0.5s;
   cursor: pointer;
   margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .button span {
@@ -187,7 +187,7 @@
 }
 
 .button span:after {
-  content: "»";
+  content: "→";
   position: absolute;
   opacity: 0;
   top: 0;
@@ -210,10 +210,30 @@
   color: dodgerblue;
 }
 
+#github{
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #6e5494;
+    border: 2px solid #6e5494;
+}
+
+#github:hover {
+  background: white;
+  color: #6e5494;
+}
+
+#github span:after {
+  color: #6e5494;
+}
+
+
+
 @media screen and (max-width: 960px) {
+.navbar{
+
+  z-index: 10;
+}
   .navbar__container {
-    display: flex;
-    justify-content: space-between;
     height: 80px;
     z-index: 1000;
     width: 100%;
@@ -223,27 +243,29 @@
   .navbar__menu {
     display: grid;
     grid-template-columns: auto;
-    margin: 0;
-    width: 100%;
+    width: 30%;
     position: absolute;
     top: -1000px;
     opacity: 0;
     transition: all 0.5s ease;
     height: 20vh;
-    z-index: -1;
-    background: #adc7ff;
+    z-index: -110;
+    margin-left: 70%;
+
+    
+    
   }
   .navbar__menu.active {
-    background: #adc7ff;
     top: 100%;
     opacity: 1;
     transition: all 0.5s ease;
-    z-index: -100;
-    height: 30vh;
+    z-index: -1000;
+    height: 0vh;
     font-size: 1.2rem;
-    border-top: 2px solid dodgerblue;
-    width: 50%;
-    justify-items: right;
+    width: 30%;
+    justify-self: right;
+    margin-left: 70%;
+
   }
   .navbar__logo {
     padding-left: 25px;
@@ -253,17 +275,23 @@
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
-    background: white;
+    background: dodgerblue;
   }
   .navbar__item {
+    background: white;
     width: 100%;
+    justify-self:right;
+    border: 2px solid dodgerblue;
+    justify-content: center;
+    align-items:center;
+    
   }
   .navbar__links {
     text-align: center;
-    padding: 2rem;
     width: 100%;
     display: table;
-    color: white;
+    color: grey;
+    padding: 1.5rem;
   }
   #mobile-menu {
     position: absolute;
