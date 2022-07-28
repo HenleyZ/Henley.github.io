@@ -9,7 +9,9 @@
 .body {
   overflow-x: hidden;
 }
+ .puffbox{
 
+ }
 .navbar {
   background: white;
   height: 80px;
@@ -152,15 +154,14 @@
   height: 50rem;
   flex-wrap: wrap;
   width: 100%;
-  margin-top: 5rem;
+  margin-top: 4rem;
   margin-left: 3rem;
 }
 
 #selfie {
 
   border-radius: 10px;
-  margin: 6rem;
-  margin-top: 0rem;
+  margin-left: 6rem;
 }
 
 .button {
@@ -171,12 +172,12 @@
   color: #FFFFFF;
   text-align: center;
   font-size: 24px;
-  padding: 20px;
+  padding: 10px;
   width: 200px;
   transition: all 0.5s;
   cursor: pointer;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .button span {
@@ -210,25 +211,56 @@
   color: dodgerblue;
 }
 
-#github{
-    display: inline-block;
-    border-radius: 10px;
-    background-color: #6e5494;
-    border: 2px solid #6e5494;
+.contact__bar{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  list-style: none;
 }
 
-#github:hover {
-  background: white;
-  color: #6e5494;
+.contact__items{
+  display: flex;
+
+}
+.project__list{
+  margin-top: 3rem;
+  display: flex;
+  list-style: none;
 }
 
-#github span:after {
-  color: #6e5494;
+.card {
+  transition: 0.3s;
+  border: 2px solid gray;
+  width: 90%;
+  
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border: 2px solid dodgerblue;
+
 }
 
 
+.container {
+  padding: 10px 16px;
+}
 
-@media screen and (max-width: 960px) {
+.projectpic{
+  max-width:100%;
+max-height:100%;
+}
+
+
+@media screen and (max-width: 1150px) {
+
+.contact__bar{
+  margin-top: 4rem;
+}
+.project__list{
+  display: block;
+}
 .navbar{
 
   z-index: 10;
@@ -315,6 +347,7 @@
   .home__container {
     width: 50%;
     margin-bottom: 15rem;
+    margin-top: 10rem;
   }
   #Home {
     margin-top: 1%;
