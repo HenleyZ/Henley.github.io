@@ -9,9 +9,7 @@
 .body {
   overflow-x: hidden;
 }
- .puffbox{
 
- }
 .navbar {
   background: white;
   height: 80px;
@@ -47,8 +45,8 @@
 }
 
 #navbar__logo {
-  background-color: #ff8177;
-  background-image: linear-gradient(to top, #1e00ff 0%, #6cbdff 100%);
+  font-weight: 400;
+  background-image: linear-gradient(to top, dodgerblue 0%, white 190%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -110,7 +108,7 @@
   font-size: 4rem;
   font-weight: 500;
   background-color: #ff8177;
-  background-image: linear-gradient(to top, #2508ff 0%, #07ffee 100%);
+  background-image: linear-gradient(to top, dodgerblue 0%, white 190%);
   background-size: 100%;
   background-clip: border-box;
   -webkit-background-clip: text;
@@ -118,12 +116,13 @@
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   display: flex;
+  transition: background-image 1s;
 }
 
 .main__content h2 {
   font-size: 5rem;
   background-color: #ff8177;
-  background-image: linear-gradient(to top, #fb00ff 0%, rgb(94, 99, 255) 100%);
+  background-image: linear-gradient(to top, dodgerblue 0%, rgb(94, 99, 255) 100%);
   background-size: 100%;
   background-clip: border-box;
   -webkit-background-clip: text;
@@ -159,9 +158,13 @@
 }
 
 #selfie {
-
+  object-fit: cover;
   border-radius: 10px;
-  margin-left: 6rem;
+  margin-left: 5rem;
+  max-width: 300px;
+  max-height: 800px;
+  width: auto;
+  height: auto;
 }
 
 .button {
@@ -221,8 +224,19 @@
 
 .contact__items{
   display: flex;
+}
+
+.contact__items img{
+  opacity: 30%;
+  transition: opacity 0.5s;
+}
+
+.contact__items img:hover{
+opacity: 100;
+filter: invert(21%) sepia(100%) saturate(7814%) hue-rotate(200deg) brightness(100%) contrast(117%);
 
 }
+
 .project__list{
   margin-top: 3rem;
   display: flex;
@@ -259,15 +273,24 @@ border-radius: 15px 15px 0 0;
 
 .contact__bar{
   margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  list-style: none;
 }
+
 .project__list{
   display: block;
+}
+
+.project{
+  margin-bottom: 2rem;
 }
 .navbar{
 
   z-index: 10;
 }
-  .navbar__container {
+.navbar__container {
     height: 80px;
     z-index: 1000;
     width: 100%;
@@ -303,6 +326,7 @@ border-radius: 15px 15px 0 0;
   }
   .navbar__logo {
     padding-left: 25px;
+    margin-left: 25PX;
   }
   .navbar__toggle .bar {
     width: 25px;
@@ -337,29 +361,40 @@ border-radius: 15px 15px 0 0;
     display: block;
     cursor: pointer;
   }
+
+  #jig{
+margin-left: 25px;
+
+  }
   #mobile-menu.is-active .bar:nth-child(2) {
-    opacity: 0;
+    transform: rotate(45deg);
   }
   #mobile-menu.is-active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(225deg);
   }
   #mobile-menu.is-active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(135deg);
   }
   .home__container {
-    width: 50%;
     margin-bottom: 15rem;
     margin-top: 10rem;
+    width: 50%;
   }
   #Home {
     margin-top: 1%;
+
   }
   #selfie {
     margin: auto;
     margin-top: 5rem;
+    margin-left:1rem;
   }
   .main__container h1, .main__container h2 {
     font-size: 3rem;
     margin: 0rem;
+  }
+
+  .main__content{
+    width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */
