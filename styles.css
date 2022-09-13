@@ -9,7 +9,10 @@
 .body {
   overflow-x: hidden;
 }
-
+a{
+  color: inherit;
+  text-decoration: inherit;
+}
 .navbar {
   background: white;
   height: 80px;
@@ -101,7 +104,8 @@
   z-index: 1;
   width: 100%;
   max-width: 1500px;
-  padding: 0 100px;
+  padding-left: 100px;
+  padding-right: 75px;
 }
 
 .main__content h1 {
@@ -237,6 +241,50 @@ filter: invert(21%) sepia(100%) saturate(7814%) hue-rotate(200deg) brightness(10
 
 }
 
+#coursework div{
+  display: flex;
+
+}
+
+#coursework div p{
+  font-size: 3rem;
+  margin-left: 2rem;
+  font-weight: 100;
+  transition: all 0.3s;
+}
+#coursework div p span{
+  font-weight: 500;
+  text-transform: uppercase;
+  text-indent: 5rem;
+}
+
+#coursework div p:hover{
+  color: dodgerblue;
+  font-size: 4rem;
+}
+
+#coursework div p {
+  font-size: 3rem;
+  margin-left: 2rem;
+  font-weight: 100;
+  transition: all 0.3s;
+}
+
+.description{
+  font-weight: 100;
+}
+
+.hidden{
+  height: 0;
+  transition: all 1s;
+}
+
+.hidden.open{
+  height: auto;
+
+}
+ 
+
 .project__list{
   margin-top: 3rem;
   display: flex;
@@ -248,6 +296,7 @@ filter: invert(21%) sepia(100%) saturate(7814%) hue-rotate(200deg) brightness(10
   border: 2px solid gray;
   width: 90%;
   border-radius: 15px;
+
   
 }
 
@@ -267,6 +316,9 @@ filter: invert(21%) sepia(100%) saturate(7814%) hue-rotate(200deg) brightness(10
 max-height:100%;
 border-radius: 15px 15px 0 0;
 }
+
+
+
 
 
 @media screen and (max-width: 1150px) {
@@ -362,6 +414,7 @@ border-radius: 15px 15px 0 0;
     cursor: pointer;
   }
 
+
   #jig{
 margin-left: 25px;
 
@@ -396,5 +449,14 @@ margin-left: 25px;
 
   .main__content{
     width: 100%;
+  }
+
+  #coursework div p:hover{
+
+    font-size: 2.1rem;
+  }
+  
+  #coursework div p {
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=styles.css.map */

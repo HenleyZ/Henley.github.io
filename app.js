@@ -5,8 +5,6 @@ menu.addEventListener('click',
     function(){
         menu.classList.toggle('is-active');
         menuLinks.classList.toggle('active');
-    
-
 });
 
 
@@ -15,4 +13,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         document.querySelector(this.getAttribute("href")).scrollIntoView({behavior : 'smooth'});
     });
+});
+
+const moreclass = document.querySelector('#more-classes')
+
+moreclass.addEventListener('click', 
+    function(){
+        moreclass.classList.toggle('open');
 });
