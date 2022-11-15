@@ -460,3 +460,16 @@ margin-left: 25px;
     font-size: 2rem;
   }
 }/*# sourceMappingURL=styles.css.map */
+
+#artbox{
+  max-width: 100%;
+}
+
+#artbox img{
+
+  height: auto; 
+  width: auto; 
+  max-width: 80%; 
+  max-height: auto;
+
+}
