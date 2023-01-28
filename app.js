@@ -4,10 +4,10 @@ const main = document.querySelector("body");
 const headerHeight = document.querySelector("nav").offsetHeight;
 
 main.style.top = headerHeight + "px";
-
+header.classList.remove("scroll-down");
 let lastScroll = 0;
 
-window.addEventListener("scroll", () => {
+function scrollfunction(e){
     let currentScroll = window.pageYOffset;
     var scrolltotop = document.scrollingElement.scrollTop;
     var target = document.getElementById("newhome");
@@ -20,20 +20,19 @@ window.addEventListener("scroll", () => {
     if(window.location.pathname == "/arts.html"){
         return
     }
-    if (currentScroll - lastScroll > 0 && currentScroll > window.innerWidth / 2 - 90) {
+    if (currentScroll > window.innerWidth / 2 - 90) {
         // scrolled down -- header hide
         header.classList.add("scroll-down");
         header.classList.remove("scroll-up");
-    } else if (currentScroll - lastScroll < 0 && currentScroll < window.innerWidth / 2 - 90){
+    } else if (currentScroll < window.innerWidth / 2 - 90){
         // scrolled up -- header show
         header.classList.add("scroll-up");
         header.classList.remove("scroll-down");
     }
 
     lastScroll = currentScroll;
-    // console.log("last: ", lastScroll);
-
-})
+}
+window.addEventListener("scroll", scrollfunction)
 
 const menu = document.querySelector('#mobile-menu')
 const menuLinks = document.querySelector('.navbar__menu')
@@ -52,12 +51,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-const moreclass = document.querySelector('#more-classes')
+// const moreclass = document.querySelector('#more-classes')
 
-moreclass.addEventListener('click', 
-    function(){
-        moreclass.classList.toggle('open');
-});
+// moreclass.addEventListener('click', 
+//     function(){
+//         moreclass.classList.toggle('open');
+// });
 
 function parallax() {
     var s = document.getElementById("floater");
@@ -68,3 +67,10 @@ window.addEventListener("scroll", function(){
     parallax(); 
 });
 
+
+window.onload = function(e) {
+    scrollfunction(true);
+  };
+  $(window).load(function() {
+    $("body").removeClass("preload");
+  });

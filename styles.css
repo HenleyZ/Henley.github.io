@@ -9,8 +9,8 @@
 
 .newhome{
   background-image: url("pexels-joyston-judah-933054.jpg");
-  background-attachment:fixed;
-  background-position:  center;
+  background-attachment: fixed;
+  background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
   display:flex;
@@ -22,6 +22,15 @@
 
 .newhome img {
   width: 120vh;
+  opacity: 100%;
+  transition: filter 20s;
+  filter: invert(21%) sepia(100%) saturate(200%) hue-rotate(200deg) brightness(100%) contrast(117%)
+}
+
+.newhome img:hover{
+opacity: 100;
+filter: invert(21%) sepia(100%) saturate(200%) hue-rotate(1360deg) brightness(100%) contrast(117%);
+
 }
 h1{
   color: white;
@@ -87,7 +96,12 @@ ul{
 
 
 
-
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+ }
 
 
 
@@ -459,6 +473,9 @@ border-radius: 15px 15px 0 0;
 .newhome div{
   height: 50%;
   width: auto;
+}
+.newhome img {
+  width: 80vw;
 }
 
 .contact__bar{
