@@ -12,7 +12,7 @@ function scrollfunction(e){
     var scrolltotop = document.scrollingElement.scrollTop;
     var target = document.getElementById("newhome");
     var xvalue = "center";
-    var factor = 0.5;
+    var factor = .5;
     var yvalue = scrolltotop * factor;
     target.style.backgroundPosition = xvalue + " -" + yvalue + "px";
     console.log("current: ", currentScroll);

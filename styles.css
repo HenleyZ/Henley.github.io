@@ -9,7 +9,7 @@
 
 
 .newhome{
-  background-image: url("arts/IMG_6035.jpg");
+  background-image: url("arts/1darkpainting.png");
   background-attachment: fixed;
   background-position: top center;
   background-repeat: no-repeat;
@@ -37,7 +37,7 @@ filter: invert(21%) sepia(100%) saturate(200%) hue-rotate(1360deg) brightness(10
 h1{
   color: white;
   font-size: 6rem;
-  font-weight: 400;
+  font-weight: 100;
 }
 
 .titlebox{
@@ -87,11 +87,14 @@ ul{
   align-items: center;
   display: flex;
 }
-
+.container{
+  font-weight: 100;
+}
 .about{
   background-color: black;
   width: auto;
   height: 100vh;
+  font-weight: 100;
 }
 
 
@@ -99,6 +102,7 @@ ul{
 
 #about{
   max-width: 30vw;
+  font-weight: 100;
 }
 
 
@@ -253,7 +257,7 @@ a{
 
 .main__content h1 {
   font-size: 4rem;
-  font-weight: 500;
+  font-weight: 300;
   background-color: #ff8177;
   background-image: linear-gradient(to top, dodgerblue 0%, white 190%);
   background-size: 100%;
@@ -268,6 +272,7 @@ a{
 
 .main__content h2 {
   font-size: 5rem;
+  font-weight: 300;
   background-color: #ff8177;
   background-image: linear-gradient(to top, dodgerblue 0%, rgb(94, 99, 255) 100%);
   background-size: 100%;
@@ -446,10 +451,9 @@ filter: invert(21%) sepia(100%) saturate(7814%) hue-rotate(200deg) brightness(10
 .card {
   transition: 0.3s;
   border: 2px solid gray;
-  width: 90%;
   border-radius: 15px;
 
-  
+  margin: 20px;
 }
 
 .card:hover {
@@ -457,6 +461,7 @@ filter: invert(21%) sepia(100%) saturate(7814%) hue-rotate(200deg) brightness(10
   border: 2px solid dodgerblue;
 
 }
+
 
 
 .container {
@@ -479,8 +484,9 @@ border-radius: 15px 15px 0 0;
   display: block;
 }
 .newhome div{
-  height: 50%;
+  height: 40%;
   width: auto;
+  z-index: 0;
 }
 .newhome img {
   width: 80vw;
