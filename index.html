@@ -1,316 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Henley Zhang</title>
-    <link rel="icon" type="image/webp" href="images/lepuff.webp">
-    <link rel="stylesheet" href="styles.css">   
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://www.cssscript.com/demo/sticky.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-<!-- NAVBAR -->
-    <div id="main"></div>
-    <nav class="navbar scroll-up">
-        <div class="navbar__container">
-        <a href="/" id="navbar__logo"><img src="images/jig.png" id="jig" alt="jig">Henley</a>
-        <div class="navbar__toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <ul class="navbar__menu">
-            <li class="navbar__item">
-                <a href="#main" class="navbar__links">home</a>
-            </li>
-            <li class="navbar__item">
-                <a href="#Projects" class="navbar__links">
-                 projects   
-                </a>
-            </li>
-        
-            <li class="navbar__item">
-                <a href="/arts.html" class="navbar__links">
-                 arts   
-                </a>
-            </li>
-            <li class="navbar__item">
-                <a href="#Fun" class="navbar__links">
-                 fun
-                </a>
-            </li>    
-        </ul>
-    </div>
-  </nav>
-<!-- HERO -->
-
-<main>
-<div class="main" id="floater">
- <div class="newhome" id="newhome">
-  <div class="titlebox">
-    <div class="titlecontainer">
-      <img src="/arts/name.png">
-      <!-- <h1>Henley Zhang</h1> -->
-</div>
-    
-    
-  </div>
-
-  <div class="linklist">
-    <div class="listbox">    <ul class="linklistlist">
-      <li class="linklistitems"><a href="#Home">about</a></li>
-      <li class="linklistitems"><a href="#Projects">projects</a></li>
-      <li class="linklistitems"><a href="arts.html">arts</a></li>
-      <li class="linklistitems"><a href="#Fun">fun</a></li>
-      <li class="linklistitems"><a href="#Contact">contact</a></li>
-    </ul></div>
-
-  </div>
-
-
- </div> 
- <div id="Home">
-   <p>-</p>
- </div>
-
-
-
-    <div class="main__container">
-        <div class="main__content">
-            <div class="home__container">
-
-            <div id="Home">
-                <h2>hi!</h2>
-                <h1>I'm Henley Zhang</h1>
-                <p id="about">I'm a second year computer science major at UC Berkeley. I'm primarily interested in front-end development, game development, and design/art!</p>
-                <!-- <a href="#Contact"><button class="button" style="vertical-align:middle"><span>Contact Me </span></button></a> -->
-                <ul class="contact__bar">
-                    <li class="contact__items"><a href="https://github.com/henleyz"><img src="images/github.png" alt="github" height="65"></a></li>
-                    <li class="contact__items"><a href="https://www.linkedin.com/in/henleyzhang/"><img src="images/linkedin.png" alt="github" height="70"></a></li>
-                    <li class="contact__items"><a href="https://www.instagram.com/henley.zhang/"><img src="images/instagram-new.png" alt="github" height="70"></a></li>
-                </ul>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Henley Zhang</title>
+      <link rel="icon" type="image/webp" href="images/lepuff.webp">
+      <link rel="stylesheet" href="styles.css">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <link href="https://www.cssscript.com/demo/sticky.css" rel="stylesheet" type="text/css">
+   </head>
+   <body>
+      <!-- NAVBAR -->
+      <div id="main"></div>
+      <nav class="navbar scroll-up">
+         <div class="navbar__container">
+            <a href="/" id="navbar__logo"><img src="images/jig.png" id="jig" alt="jig">Henley</a>
+            <div class="navbar__toggle" id="mobile-menu">
+               <span class="bar"></span>
+               <span class="bar"></span>
+               <span class="bar"></span>
             </div>
-                
-            <img src="images/oskii.png" alt="oski running at you"  id="selfie" width="400" 
-            height="auto">
-        
-        </div>
-            <div class="break"></div>
-            <div id="Projects"></div>
-            <div class="break"></div>
-            <div data-aos="fade-up">
-            <section> 
-                <h1>Projects</h1>
-                <ul class="project__list">
-                    <li class="project">
-                        <a href="https://likeacow.itch.io/arcadia">
-                            <div class="card" data-aos="fade-up">
-                            <img src="images/arcadia.png" alt="oski"  class="projectpic" >
-                            <div class="container">
-                              <h4><b>Arcadia - Unreal Engine (Click for demo)</b></h4>
-                              <p>This is my favorite project. It is essentialy Valorant replaced with anime chanracters built from the ground up in Unreal Engine with a server-authoritative design. The game has an anime like art style thanks to a custom shader source build. One of the key features is client-server replication to prevent modified client hacks.
-
-                                The hardest part was developing a custom server-validated line trace lag compensation system to mitigate the effects of ping. Otherwise, other players would have to end up leading their shots based on how laggy they are, which goes again the design of precise gun play. I emulated keys aspects of Valorant/CSGO gameplay (weapons, spray pattern, recoil, movement, projectiles, bullet penetration).
-                                This game is still heavily being working on, and I am at the point of a working multiplayer demo over steam. Unlike most FPS development projects in unreal, I didn't not use anny weapon system asset packs.
-    
-                                </p>
-                            </div>
-                          </div>
-                        </a>
-                    </li>
-                    <li class="project">
-                        <a href="https://github.com/curtisyu0411/Web-Dev-Final-Project">
-                            <div class="card" data-aos="fade-up">
-                            <img src="images/libraryfinderlogo.png" alt="oski"  class="projectpic">
-                            <div class="container">
-                              
-                              <h4><b>Study Buddy</b></h4>
-                              <p>An online platform that collects information about libraries across the UC Berkeley campus and recommends the user a selection of choices based on user preference input. Accessible information about libraries which the “filter by” feature will be based upon includes a live crowd meter, user reviews, open hours, and more. Built With:
-                                React.js, Axios, Chakra UI, MongoDB, Express.js, Node.js. 
-                                Features    
-                                <ul>
-                                    <li>Algorithm thats generate an ordered list that tries to align with user inputed preferences</li>
-                                    <li>Dynamic router for procedural website per library</li>
-                                    <li>API to gather live/estimated busyness at a library</li>
-                                    <li>Caching system to limit API calls</li>
-                                    <li>Authentication and login system to save user preferences</li>
-                                    <li>Review and rating system per library</li>
-                                    <li>Libraries are not hard coded, easy to add additional places.</li>
-                                  </ul>
-                                
-                                
-                                
-                                
-                                
-                                
-                                </p>
-                            </div>
-                        </a>
-                      
-                    </li>
-                    <li class="project">
+            <ul class="navbar__menu">
+               <li class="navbar__item">
+                  <a href="#main" class="navbar__links">home</a>
+               </li>
+               <li class="navbar__item">
+                  <a href="#Projects" class="navbar__links">
+                  projects   
+                  </a>
+               </li>
+               <li class="navbar__item">
+                  <a href="/arts.html" class="navbar__links">
+                  arts   
+                  </a>
+               </li>
+               <li class="navbar__item">
+                  <a href="#Fun" class="navbar__links">
+                  fun
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <!-- HERO -->
+      <main>
+         <div class="main" id="floater">
+         <div class="newhome" id="newhome">
+            <div class="titlebox">
+               <div class="titlecontainer">
+                  <img src="/arts/name.png">
+                  <!-- <h1>Henley Zhang</h1> -->
+               </div>
+            </div>
+            <div class="linklist">
+               <div class="listbox">
+                  <ul class="linklistlist">
+                     <li class="linklistitems"><a href="#Home">about</a></li>
+                     <li class="linklistitems"><a href="#Projects">projects</a></li>
+                     <li class="linklistitems"><a href="arts.html">arts</a></li>
+                     <li class="linklistitems"><a href="#Fun">fun</a></li>
+                     <li class="linklistitems"><a href="#Contact">contact</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div id="Home">
+            <p>-</p>
+         </div>
+         <div class="main__container">
+            <div class="main__content">
+               <div class="home__container">
+                  <div id="Home">
+                     <h2>hi!</h2>
+                     <h1>I'm Henley Zhang</h1>
+                     <p id="about">I'm a second year computer science major at UC Berkeley. I'm primarily interested in front-end development, game development, and design/art!</p>
+                     <!-- <a href="#Contact"><button class="button" style="vertical-align:middle"><span>Contact Me </span></button></a> -->
+                     <ul class="contact__bar">
+                        <li class="contact__items"><a href="https://github.com/henleyz"><img src="images/github.png" alt="github" height="65"></a></li>
+                        <li class="contact__items"><a href="https://www.linkedin.com/in/henleyzhang/"><img src="images/linkedin.png" alt="github" height="70"></a></li>
+                        <li class="contact__items"><a href="https://www.instagram.com/henley.zhang/"><img src="images/instagram-new.png" alt="github" height="70"></a></li>
+                     </ul>
+                  </div>
+                  <img src="images/oskii.png" alt="oski running at you"  id="selfie" width="400" 
+                     height="auto">
+               </div>
+               <div class="break"></div>
+               <div id="Projects"></div>
+               <div class="break"></div>
+               <div data-aos="fade-up">
+                  <section>
+                     <h1>Projects</h1>
+                     <div data-aos="fade-up">
+                        <div class="hoverpcard">
+                           <a target="_blank" href="arcadia.html">
+                              <div class="pcard" id="arcadia" >
+                              </div>
+                              <div class="pcardtext">
+                                 <h4>Arcadia</h4>
+                                 <h3>A server authoritative networked FPS game in Unreal with custom lag compensation algorithms</h3>
+                           <a target="_blank" href="arcadia.html"><div class="learnmore">Learn More</div></a>
+                           </div>
+                           </a>
+                        </div>
+                     </div>
+                     <div data-aos="fade-up">
+                        <div class="hoverpcard">
+                           
+                              <div class="pcard" id="library" >
+                              </div>
+                              <div class="pcardtext">
+                                 <h4>LibraryFinder</h4>
+                                 <h3>A full stack web app that recommends and ranks libraries based on inputed user preferences</h3>
+                                 <h3 style="font-size: 1rem";>Note: this is hosted on a render.com free app, it may take up to 5 minutes for the backend to start</h3>
+                           <div style="display:flex; align-items: flex-start"><a  href="https://library-finder-app.onrender.com/" target="_blank"><div class="learnmore" style="margin-right: 30px;">Demo</div></a> <a target="_blank" href="https://github.com/henleyz/Web-Dev-Final-Project"><div class="learnmore">Github</div></a></div>
+                           </div>
+                           
+                        </div>
+                     </div>
+                     <!-- <div class="projects__cards">
+                     </div>
+                     <ul class="project__list">
+                        <li class="project">
+                           <a href="https://likeacow.itch.io/arcadia">
+                              <div class="card" data-aos="fade-up">
+                                 <img src="images/arcadia.png" alt="oski"  class="projectpic" >
+                                 <div class="container">
+                                    <h4><b>Arcadia - Unreal Engine (Click for demo)</b></h4>
+                                    <p>This is my favorite project. It is essentialy Valorant replaced with anime chanracters built from the ground up in Unreal Engine with a server-authoritative design. The game has an anime like art style thanks to a custom shader source build. One of the key features is client-server replication to prevent modified client hacks.
+                                       The hardest part was developing a custom server-validated line trace lag compensation system to mitigate the effects of ping. Otherwise, other players would have to end up leading their shots based on how laggy they are, which goes again the design of precise gun play. I emulated keys aspects of Valorant/CSGO gameplay (weapons, spray pattern, recoil, movement, projectiles, bullet penetration).
+                                       This game is still heavily being working on, and I am at the point of a working multiplayer demo over steam. Unlike most FPS development projects in unreal, I didn't not use anny weapon system asset packs.
+                                    </p>
+                                 </div>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="project">
+                           <a href="https://github.com/curtisyu0411/Web-Dev-Final-Project">
+                              <div class="card" data-aos="fade-up">
+                                 <img src="images/libraryfinderlogo.png" alt="oski"  class="projectpic">
+                                 <div class="container">
+                                    <h4><b>Study Buddy</b></h4>
+                                    <p>An online platform that collects information about libraries across the UC Berkeley campus and recommends the user a selection of choices based on user preference input. Accessible information about libraries which the “filter by” feature will be based upon includes a live crowd meter, user reviews, open hours, and more. Built With:
+                                       React.js, Axios, Chakra UI, MongoDB, Express.js, Node.js. 
+                                       Features    
+                                    <ul>
+                                       <li>Algorithm thats generate an ordered list that tries to align with user inputed preferences</li>
+                                       <li>Dynamic router for procedural website per library</li>
+                                       <li>API to gather live/estimated busyness at a library</li>
+                                       <li>Caching system to limit API calls</li>
+                                       <li>Authentication and login system to save user preferences</li>
+                                       <li>Review and rating system per library</li>
+                                       <li>Libraries are not hard coded, easy to add additional places.</li>
+                                    </ul>
+                                    </p>
+                                 </div>
+                           </a>
+                        </li>
+                        <li class="project">
                         <div class="card" data-aos="fade-up">
                         <img src="images/mazze.png" alt="oski"  class="projectpic">
                         <div class="container">
-                          <h4><b>School Projects</b></h4>
-                          <p>BYOW - exploration game with a custom random dungeon generation algorithm, written in java
-                            Scheme Interpreter - written in python
-                            Ngordnet - uses graph algorithms and custom data structures to parse info about a given word’s hyponyms and usages rates over time
-                            Ants vs Zombees - plants vs zombies inspired game written in python
-                            </p>
+                        <h4><b>School Projects</b></h4>
+                        <p>BYOW - exploration game with a custom random dungeon generation algorithm, written in java
+                        Scheme Interpreter - written in python
+                        Ngordnet - uses graph algorithms and custom data structures to parse info about a given word’s hyponyms and usages rates over time
+                        Ants vs Zombees - plants vs zombies inspired game written in python
+                        </p>
                         </div>
-                      </div>
-                    </li>
-
-                </ul>
-
-            </section></div>
-            <div class="break"></div>
-            <section id="coursework"> 
-                <div data-aos="fade-up">
-                <h1>Coursework</h1>
-                </div>                <div data-aos="fade-up"><a><p class="title"><span>Physics 7a</span> Physics for Scientists and Engineers</p></a></div>
-
-                <div data-aos="fade-up"><a><p class="title"><span>Chem 4a/4b</span> General Chemistry and Quantitative Analysis</p></a></div>
-                <div data-aos="fade-up"><a><p class="title"><span>Math 53</span> Multivariable Calculus</p></a></div>
-
-                <div data-aos="fade-up"><a><p class="title"><span>Math 54</span> Linear Algebra and Differential Equations</p></a></div>
-
-                <div data-aos="fade-up"><a><p class="title"><span>CS 61a</span> Structure and Interpretation of Computer Programs</p></a></div>
-
-                <div data-aos="fade-up"><a><p class="title"><span>cs 61b</span> Data Structures</p></a></div>
-
-                <div data-aos="fade-up"><a><p class="title"><span>cs 70</span> Discrete Mathematics and Probability Theory</p></a></div>
-                <div data-aos="fade-up"><a><p class="title"><span>cs 61c</span> Discrete Mathematics and Probability Theory</p></a></div>
-                <div data-aos="fade-up"><a><p class="title"><span>cs 198-99</span> Introduction to Full Stack Development </p></a></div>
-                <div data-aos="fade-up"><a><p class="title"><span></span>Plans </p></a></div>
-                <div data-aos="fade-up"><a><p class="title"><span>cs 170</span> CS Theory</p></a></div>
-                
-                <div data-aos="fade-up"><a><p class="title"><span>cs 188</span> AI</p></a></div>
-                <div data-aos="fade-up"><a><p class="title"><span>data 100</span> Data Analysis</p></a></div>
-
-
-                <div data-aos="fade-up"><a><p class="title"><span>cs 186</span> Database Systems</p></a></div>
-                <div data-aos="fade-up"><a><p class="title"><span>cs 162</span> Operating Systems</p></a></div>
-
-
-                <div data-aos="fade-up"><a><p class="title"><span>cs 161</span> Computer Security</p></a></div>
-                <div data-aos="fade-up"><a><p class="title"><span>cs 189</span> Machine Learning</p></a></div>
-
-
-                
-
-
-
-
-
-            </section>
-        
-            <div class="break"></div>
-            <!-- <section> 
-                <div data-aos="fade-up">
-                <h1>Experience</h1>
-                <ul class="project__list">
-                    <li class="project">
-                        <div class="card" data-aos="fade-up">
-                        <img src="images/oski.jpg" alt="oski"  class="projectpic">
-                        <div class="container">
-                          <h4><b>Lorem Ipsum</b></h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="project">
-                        <div class="card" data-aos="fade-up">
-                        <img src="images/oski.jpg" alt="oski"  class="projectpic">
-                        <div class="container">
-                          <h4><b>Lorem Ipsum</b></h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="project">
-                        <div class="card" data-aos="fade-up">
-                        <img src="images/oski.jpg" alt="oski"  class="projectpic">
-                        <div class="container">
-                          <h4><b>Lorem Ipsum</b></h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                      </div>
-                    </li>
-
-                </ul>
-            </div>
-            </section> -->
-            <div id="Fun"></div>
-            <div class="break"></div>
-            <section> 
-                <div data-aos="fade-up">
-                <h1>Fun</h1>
-                <ul class="project__list">
-                    <li class="project">
-                        <a href="arts.html"><div class="card" data-aos="fade-up">
-                        <img src="arts/winterhouse.jpg" alt="oski"  class="projectpic" height="350px" width="1500px" style="object-fit: cover;">
-                        <div class="container">
-                          <h4><b>Click for Art Gallery</b></h4>
-                          <p>I like drawing and painting. It takes me a lot of time. Here is my portfolio. Ignore the overly deep captions, I was trying to impress a certain type of people. I just draw whats cool. :) </p>
-                        </div>
-                      </div>
-                    </a>
-                    </li>
-                    <li class="project">
-                        <a href="https://osu.ppy.sh/users/15310458">
-                            <div class="card" data-aos="fade-up">
-                            <img src="images/osu.gif" alt="oski"  class="projectpic" width="1500px">
-                            <div class="container">
-                              <h4><b>Mania</b></h4>
-                              <p>Rank 22k. It looks really impressive but I'm actually not that good.</p>
-                            </div>
-                          </div>
+                        </div> -->
+                        <!-- </li>
+                     </ul> -->
+                  </section>
+                  </div>
+                  <div class="break"></div>
+                  <section id="coursework">
+                     <div data-aos="fade-up">
+                        <h1>Coursework</h1>
+                     </div>
+                     <div data-aos="fade-up">
+                        <a>
+                           <p class="title"><span>Physics 7a</span> Physics for Scientists and Engineers</p>
                         </a>
-                    </li>
-                    <li class="project">
-                        <div class="card" data-aos="fade-up">
-                        <img src="images/chem.png" alt="oski"  class="projectpic">
-                        <div class="container">
-                          <h4><b>Chemistry</b></h4>
-                          <p>I went into Berkeley as a Chemistry Major, but despite my grievences with how they taught 4A I still hold a great interest in chemistry</p>
-                        </div>
-                      </div>
-                    </li>
-
-                </ul>
+                     </div>
+                     <div data-aos="fade-up">
+                        <a>
+                           <p class="title"><span>Chem 4a/4b</span> General Chemistry and Quantitative Analysis</p>
+                        </a>
+                     </div>
+                     <div data-aos="fade-up">
+                        <a>
+                           <p class="title"><span>Math 53</span> Multivariable Calculus</p>
+                        </a>
+                     </div>
+                     <div data-aos="fade-up">
+                        <a>
+                           <p class="title"><span>Math 54</span> Linear Algebra and Differential Equations</p>
+                        </a>
+                     </div>
+                     <div data-aos="fade-up">
+                        <a>
+                           <p class="title"><span>CS 61a</span> Structure and Interpretation of Computer Programs</p>
+                        </a>
+                     </div>
+                     <div data-aos="fade-up">
+                        <a>
+                           <p class="title"><span>cs 61b</span> Data Structures</p>
+                        </a>
+                     </div>
+                     <div data-aos="fade-up">
+                        <a>
+                           <p class="title"><span>cs 70</span> Discrete Mathematics and Probability Theory</p>
+                        </a>
+                     </div>
+                     <div data-aos="fade-up">
+                        <a>
+                           <p class="title"><span>cs 61c</span> Discrete Mathematics and Probability Theory</p>
+                        </a>
+                     </div>
+                     <div data-aos="fade-up">
+                        <a>
+                           <p class="title"><span>cs 198-99</span> Introduction to Full Stack Development </p>
+                        </a>
+                     </div>
+                     <div data-aos="fade-up">
+                        <a>
+                           <p class="title"><span></span>Plans </p>
+                        </a>
+                     </div>
+                     <div data-aos="fade-up">
+                        <a>
+                           <p class="title"><span>cs 170</span> CS Theory</p>
+                        </a>
+                     </div>
+                     <div data-aos="fade-up">
+                        <a>
+                           <p class="title"><span>cs 188</span> AI</p>
+                        </a>
+                     </div>
+                     <div data-aos="fade-up">
+                        <a>
+                           <p class="title"><span>data 100</span> Data Analysis</p>
+                        </a>
+                     </div>
+                     <div data-aos="fade-up">
+                        <a>
+                           <p class="title"><span>cs 186</span> Database Systems</p>
+                        </a>
+                     </div>
+                     <div data-aos="fade-up">
+                        <a>
+                           <p class="title"><span>cs 162</span> Operating Systems</p>
+                        </a>
+                     </div>
+                     <div data-aos="fade-up">
+                        <a>
+                           <p class="title"><span>cs 161</span> Computer Security</p>
+                        </a>
+                     </div>
+                     <div data-aos="fade-up">
+                        <a>
+                           <p class="title"><span>cs 189</span> Machine Learning</p>
+                        </a>
+                     </div>
+                  </section>
+                  <div class="break"></div>
+                  <!-- <section> 
+                     <div data-aos="fade-up">
+                     <h1>Experience</h1>
+                     <ul class="project__list">
+                         <li class="project">
+                             <div class="card" data-aos="fade-up">
+                             <img src="images/oski.jpg" alt="oski"  class="projectpic">
+                             <div class="container">
+                               <h4><b>Lorem Ipsum</b></h4>
+                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                             </div>
+                           </div>
+                         </li>
+                         <li class="project">
+                             <div class="card" data-aos="fade-up">
+                             <img src="images/oski.jpg" alt="oski"  class="projectpic">
+                             <div class="container">
+                               <h4><b>Lorem Ipsum</b></h4>
+                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                             </div>
+                           </div>
+                         </li>
+                         <li class="project">
+                             <div class="card" data-aos="fade-up">
+                             <img src="images/oski.jpg" alt="oski"  class="projectpic">
+                             <div class="container">
+                               <h4><b>Lorem Ipsum</b></h4>
+                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                             </div>
+                           </div>
+                         </li>
+                     
+                     </ul>
+                     </div>
+                     </section> -->
+                  <div id="Fun"></div>
+                  <div class="break"></div>
+                  <section>
+                     <div data-aos="fade-up">
+                        <h1>Fun</h1>
+                        <ul class="project__list">
+                           <li class="project">
+                              <a href="arts.html">
+                                 <div class="card" data-aos="fade-up">
+                                    <img src="arts/winterhouse.jpg" alt="oski"  class="projectpic" height="350px" width="1500px" style="object-fit: cover;">
+                                    <div class="container">
+                                       <h4><b>Click for Art Gallery</b></h4>
+                                       <p>I like drawing and painting. It takes me a lot of time. Here is my portfolio. Ignore the overly deep captions, I was trying to impress a certain type of people. I just draw whats cool. :) </p>
+                                    </div>
+                                 </div>
+                              </a>
+                           </li>
+                           <li class="project">
+                              <a href="https://osu.ppy.sh/users/15310458">
+                                 <div class="card" data-aos="fade-up">
+                                    <img src="images/osu.gif" alt="oski"  class="projectpic" width="1500px">
+                                    <div class="container">
+                                       <h4><b>Mania</b></h4>
+                                       <p>Rank 22k. It looks really impressive but I'm actually not that good.</p>
+                                    </div>
+                                 </div>
+                              </a>
+                           </li>
+                           <li class="project">
+                              <div class="card" data-aos="fade-up">
+                                 <img src="images/chem.png" alt="oski"  class="projectpic">
+                                 <div class="container">
+                                    <h4><b>Chemistry</b></h4>
+                                    <p>I went into Berkeley as a Chemistry Major, but despite my grievences with how they taught 4A I still hold a great interest in chemistry</p>
+                                 </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                  </section>
+                  <div class="break"></div>
+                  <div id="Contact"></div>
+                  <div class="break"></div>
+                  <div data-aos="fade-up">
+                     <h1>Contact</h1>
+                  </div>
+                  <section>
+                     <div class="break"></div>
+                     <div class="break"></div>
+                     <div class="break"></div>
+                     <p>animation by aos</p>
+                  </section>
+               </div>
             </div>
-            </section>
-            <div class="break"></div>
-            <div id="Contact"></div>
-            <div class="break"></div>
-            <div data-aos="fade-up">
-            <h1>Contact</h1>
-            </div>  
-            <section>
-                <div class="break"></div>
-                <div class="break"></div>
-                <div class="break"></div>
-
-                <p>animation by aos</p>
-            </section>
-        </div>
-        </div>
-
-</div>
-</main>
-
-
-
-
-<script src="app.js"></script>
-<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-  </script>
-  
-</body>
+         </div>
+      </main>
+      <script src="app.js"></script>
+      <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+      <script>
+         AOS.init();
+      </script>
+   </body>
 </html>
