@@ -383,7 +383,7 @@ a{
 }
 
 #Home {
-  margin-top: 10rem;
+  margin-top: 6rem;
 }
 
 .home__container {
@@ -391,7 +391,7 @@ a{
   height: 50rem;
   flex-wrap: wrap;
   width: 100%;
-  margin-top: 4rem;
+  margin-top: 1rem;
   margin-left: 3rem;
 }
 nav.scroll-up{
@@ -415,7 +415,6 @@ nav.scroll-down{
 
 .button {
   display: inline-block;
-  border-radius: 10px;
   background-color: dodgerblue;
   border: 2px solid dodgerblue;
   color: #FFFFFF;
