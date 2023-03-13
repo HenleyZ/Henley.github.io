@@ -40,7 +40,6 @@
 .hoverpcard{
   overflow: hidden;
   width: 100%;
-  margin-top: 50px;
   margin-bottom: 50px;
   height: 400px;
 }
@@ -63,7 +62,24 @@
 
 }
 
-
+.twoacross{
+  justify-content: space-between;
+  position: relative;
+}
+.halfbox{
+  align-items: flex-start; display: flex; justify-content: space-between;
+}
+.halfw{
+  display: flex;
+  position: relative;
+  width: 48%;
+}
+.halfw > .pcardtext > h4{
+  font-size: 3rem;
+}
+.halfw > .pcardtext > h3{
+  font-size: 1rem;
+}
 
 .pcardtext{
   position: absolute;
@@ -88,9 +104,16 @@
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(images/arcadiagameplay.png);
 
 }
-
+#arts{
+  background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(arts/painting.png);
+}
 #library{
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://s.hdnux.com/photos/45/20/37/9766886/6/1200x0.jpg");
+}
+
+#resumerevamper{
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://thumbs.dreamstime.com/z/indeed-com-web-site-selective-focus-macro-image-homepage-loaded-screen-browser-179273456.jpg");
+
 }
 .newhome{
   background-image: url("arts/1darkpainting.png");
@@ -122,6 +145,7 @@ h1{
   color: white;
   font-size: 6rem;
   font-weight: 100;
+  margin-bottom: 10px;
 }
 
 .titlebox{
@@ -267,6 +291,10 @@ a{
   top: 0;
 }
 
+#endcontact{
+  align-items:flex-end; 
+  width: 100%;
+}
 #jig {
   border-radius: 8px;
   height: auto;
@@ -575,7 +603,20 @@ border-radius: 15px 15px 0 0;
 .newhome img {
   width: 80vw;
 }
-
+.halfbox{
+  display: block;
+}
+.halfw{
+  display: flex;
+  position: relative;
+  width: 100%
+}
+.pcardtext > h4{
+  font-size: 3rem;
+}
+.pcardtext > h3{
+  font-size: 1rem;
+}
 .contact__bar{
   margin-top: 4rem;
   display: flex;
@@ -594,6 +635,9 @@ border-radius: 15px 15px 0 0;
 .navbar{
 
   z-index: 10;
+}
+#endcontact{
+  display: block;
 }
 .navbar__container {
     height: 80px;
@@ -682,22 +726,25 @@ margin-left: 25px;
     transform: translateY(-8px) rotate(135deg);
   }
   .home__container {
-    margin-bottom: 15rem;
+    margin-bottom: 1rem;
     margin-top: 10rem;
     width: 50%;
+    display: block;
   }
   #Home {
     margin-top: 1%;
 
   }
   #selfie {
-    margin: auto;
     margin-top: 5rem;
     margin-left:1rem;
+    display: block;
+    display: none;
   }
   .main__container h1, .main__container h2 {
     font-size: 3rem;
     margin: 0rem;
+    margin-bottom: 1rem;
   }
 
   .main__content{
