@@ -591,7 +591,10 @@ border-radius: 15px 15px 0 0;
 
 
 @media screen and (max-width: 1150px) {
-
+.main__container{
+  margin: 0rem;
+  padding: 1rem;
+}
 .newhome{
   display: block;
 }
@@ -728,12 +731,13 @@ margin-left: 25px;
   .home__container {
     margin-bottom: 1rem;
     margin-top: 10rem;
-    width: 50%;
+    width: 100%;
     display: block;
+    margin: 1rem;
   }
   #Home {
     margin-top: 1%;
-
+    width: 90%;
   }
   #selfie {
     margin-top: 5rem;
@@ -746,11 +750,17 @@ margin-left: 25px;
     margin: 0rem;
     margin-bottom: 1rem;
   }
-
+  .break{
+    height: 1rem;
+  }
   .main__content{
     width: 100%;
+    margin: 0rem;
   }
-
+  
+  #about{
+    max-width: 100%;
+  }
   #coursework div p:hover{
 
     font-size: 2.1rem;
