@@ -10,14 +10,14 @@ let lastScroll = 0;
 function scrollfunction(e){
     let currentScroll = window.pageYOffset;
     var scrolltotop = document.scrollingElement.scrollTop;
-    var target = document.getElementById("newhome");
+    var target = document.getElementById("scrolleffect");
     var xvalue = "center";
     var factor = .5;
     var yvalue = scrolltotop * factor;
     target.style.backgroundPosition = xvalue + " -" + yvalue + "px";
     console.log("current: ", currentScroll);
     console.log("last: ", lastScroll);
-    if(window.location.pathname == "/arts.html"){
+    if(window.location.pathname == "/arts.html" || window.location.pathname == "/arcadia.html"){
         return
     }
     if (currentScroll > window.innerWidth / 2 - 90) {
