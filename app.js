@@ -8,7 +8,7 @@ header.classList.remove("scroll-down");
 let lastScroll = 0;
 
 function scrollfunction(e){
-    let currentScroll = window.pageYOffset;
+    let currentScroll = window.scrollY;
     var scrolltotop = document.scrollingElement.scrollTop;
     var target = document.getElementById("scrolleffect");
     var xvalue = "center";
@@ -17,9 +17,9 @@ function scrollfunction(e){
     target.style.backgroundPosition = xvalue + " -" + yvalue + "px";
     console.log("current: ", currentScroll);
     console.log("last: ", lastScroll);
-    if(window.location.pathname == "/arts.html" || window.location.pathname == "/arcadia.html"){
-        return
-    }
+    // if(window.location.pathname == "/arts.html" || window.location.pathname == "/arcadia.html"){
+    //     print("arts page")
+    // }
     if (currentScroll > window.innerWidth / 2 - 90) {
         // scrolled down -- header hide
         header.classList.add("scroll-down");
