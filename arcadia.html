@@ -62,7 +62,7 @@
                 <li><a href="#server-authoritative-networking">Server Authoritative Networking System</a></li>
                 <li><a href="#lag-compensation">Custom Lag Compensation Algorithm</a></li>
                 <li><a href="#gun-spray">Gunplay Recoil Algorithm</a></li>
-                <li><a href="#bullet-hitscan">Bullet Hitscan Penetration Algorithm</a></li>
+                <li><a href="#gun-pen">Bullet Hitscan Penetration Algorithm</a></li>
                 <li><a href="#game-framework">Game Framework + Design</a></li>
             </ul>
             <div class="break"></div>
@@ -100,9 +100,30 @@
             <h1 id="gun-spray">Gun Spray Algorithm</h1>
             <div class="smallbreak"></div>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/SiaqWkY_zPo?si=vYdQbtAZGK6zsTvp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/phR9gfwe0no?si=A1-u3sbPsXerUs9b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/phR9gfwe0no?si=A1-u3sbPsXerUs9b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="smallbreak"></div>
+            <p>I designed this algorithm through a lot of playtesting and trial and error. Heres how it works. </p>
+            <div class="smallbreak"></div>
+            <div class="container">  
+                <ol>
+                    <li>There is an internal heat variable, which is stored on the client and the server as two different versions. The client variables are separated from the server to maintain the spray even in poor network conditions.</li>
+                    <li>When a weapon is fired, the heat variable is increased by a certain amount depending on the characteristics of the weapon. For example, SMGs have a higher heat growth multiplier compared to silenced weapons.</li>
+                    <li>There are three components to recoil: screenshake, crosshair movement, and crosshair deviation.</li>
+                    <li>Screenshake is simply implemented by calling a UE4 screenshake locally, and the shake level depends on the force of the gun.</li>
+                    <li>Crosshair movement is implemented by lerping the crosshair to a given amount. This amount is determined by the heat variable as well as the client FPS, so the crosshair movement is consistent across different performing machines.</li>
+                    <li>Crosshair deviation is implemented by adjusting the hitscan vector. This amount is also determined by the heat variable. It causes the bullets to fly above the crosshair in the crux of the spray. A small amount of RNG is applied to crosshair deviation, which is tied to the heat variable.</li>
+                    <li>When the heat variable exceeds a certain amount (Around 30), it cycles back to an intermediate amount, so that the side-to-side motion happens seamlessly.</li>
+                    <li>Any amount of crosshair movement recoil is added to a local variable. When the player stops shooting, the amount of this local variable is used to return the crosshair to the original location. This also takes FPS into account.</li>
+                    <li>The whole time, the heat variable decays, depending on the characteristics of the weapon.</li>
+                </ol>
+            </div>
+            <div class="smallbreak"></div>
+            <p>All this complexity allows the spray pattern to follow a consistent characteristic T-shaped pattern found in Valorant and CSGO. The numerous ways spray can be adjusted allow for easy modifications to weapons.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SiaqWkY_zPo?si=vYdQbtAZGK6zsTvp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="break"></div>
+
+            <h1 id="gun-pen">Hitscan Bullet Penetration Algorithm</h1>
             <h1>website WIP</h1>
         </div>
         
