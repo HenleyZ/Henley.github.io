@@ -52,28 +52,35 @@
 <div class="main">
     <div class="main__container">
         <div class="main__content">
-            <h2>Features</h2>
-            
-            <h2>Table of Contents</h2>
-            <ul>
+            <h2>Technical Details</h2>
+            <div class="smallbreak"></div>
+            <iframe width="1060" height="615" src="https://www.youtube.com/embed/h-hqKZcj1wE?si=oQGeVbH7xLlc9Xqd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="break"></div>
+            <h2 style="font-size: 3rem;">Table of Contents</h2>
+
+            <ul class="tableofcontents">
                 <li><a href="#server-authoritative-networking">Server Authoritative Networking System</a></li>
                 <li><a href="#lag-compensation">Custom Lag Compensation Algorithm</a></li>
-                <li><a href="#gunplay-recoil">Gunplay Recoil Algorithm</a></li>
+                <li><a href="#gun-spray">Gunplay Recoil Algorithm</a></li>
                 <li><a href="#bullet-hitscan">Bullet Hitscan Penetration Algorithm</a></li>
                 <li><a href="#game-framework">Game Framework + Design</a></li>
             </ul>
+            <div class="break"></div>
         
             <h1 id="server-authoritative-networking">Server Authoritative Networking System</h1>
+            <div class="smallbreak"></div>
+            <iframe width="1060" height="615" src="https://www.youtube.com/embed/NdnWYkCvlsQ?si=U8PMF98eH2XAw9Jv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
             <p>The game is networked using a server authoritative system rather than a P2P client-based system. The advantages are that it is much more secure since the client has no authority to change what happens on the server; it only sends requests that the server acts on, preventing many abuses caused by a modified client. However, this style of networking presents many challenges. The client side has to be programmed to preserve responsiveness in movement and shooting, meaning that actions initiated by the player are split into a local instance and a server instance. The server also has to account for lag compensation; otherwise, the validation of a line trace (a fired bullet) has to account for the passage of time between information being sent from the client to the server.</p>
             <img src="https://docs.elympics.cc/images/overview/sa1.png" alt="diagram" width="90%" style="padding:1rem;">
-        
+            <div class="break"></div>
             <h1 id="lag-compensation">Custom Lag Compensation Algorithm</h1>
             <p>Everything seemed alright when I booted up the server on my LAN. The game felt fluid and responsive. However, as soon as I tried to connect to a server my friend hosted 1000 miles away, the networking completely fell apart. None of the bullets I fired hit the target; the bullets that seemed to miss resulted in a kill. I did a lot of research into the problem and discovered the issue of lag compensation. This video explains this topic way better than I could.</p>
             
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/6EwaW2iz4iA?si=DnSXCVcKIKMg-LHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="1060" height="615" src="https://www.youtube.com/embed/6EwaW2iz4iA?si=DnSXCVcKIKMg-LHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             
             <p>However, the problem was that I was programming in Unreal Engine, and such a framework did not exist (actually, it does, but for $350!). I basically gave up on the problem until I came across this research paper <a style="color: blueviolet;" href="https://liu.diva-portal.org/smash/get/diva2:1605200/FULLTEXT01.pdf">here</a> detailing a method for developing a lag compensation algorithm along with testing methodology. I soon ended up with this system.</p>
-            
+            <div class="container">            <br>
             <ol>
                 <li>The server saves a bone map and the location of every single player every tick. The bone map is a hashtable that maps bone names to their local transforms. This location object also maps in a hash table that maps players to their locations. A final double-ended queue maps the player hash tables to the exact server time.</li>
                 <li>Each client is constantly pinging the server for the ping. (ex 20ms) This ping is updated and saved on the server.</li>
@@ -84,10 +91,19 @@
                 <li>The bone transforms are used to reconstruct a hitbox object, which lives on the server.</li>
                 <li>The line trace is performed in the world and checks for hits against the hitbox object. If the hit connects, the damage is applied.</li>
             </ol>
-            
-            
+            </div>
 
-            <div class="artbox"></div>
+            <iframe width="1060" height="615" src="https://www.youtube.com/embed/OrWSBLe4Uk4?si=A50ibYXv0-lpts9q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <div class="break"></div>
+
+            <h1 id="gun-spray">Gun Spray Algorithm</h1>
+            <div class="smallbreak"></div>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SiaqWkY_zPo?si=vYdQbtAZGK6zsTvp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/phR9gfwe0no?si=A1-u3sbPsXerUs9b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <h1>website WIP</h1>
         </div>
         
         </div>

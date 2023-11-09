@@ -404,6 +404,10 @@ a{
   justify-self: center;
 }
 
+.smallbreak{
+  height: 30px;
+}
+
 #about {
   padding-top: 1rem;
   font-size: 1.5rem;
@@ -569,6 +573,10 @@ filter: invert(21%) sepia(100%) saturate(7814%) hue-rotate(200deg) brightness(10
 
 }
 
+.iframe {
+  margin: 2rem;
+  padding: 2rem;
+}
 
 
 .container {
@@ -641,7 +649,30 @@ font-size: 3rem;
 }
 
 
+.tableofcontents{
+  margin-top: 3rem;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
+}
+
+.tableofcontents li{
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 100;
+  transition: all 0.3s;
+  text-decoration: underline;
+}
+iframe{
+  margin: 2rem;
+}
+p{
+  font-size: 1.5rem;
+  font-weight: 100;
+  text-indent: 4rem;
+}
 
 @media screen and (max-width: 1150px) {
 .main__container{
@@ -806,6 +837,7 @@ margin-left: 25px;
   .break{
     height: 1rem;
   }
+
   .main__content{
     width: 100%;
     margin: 0rem;
