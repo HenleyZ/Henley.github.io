@@ -7,10 +7,24 @@ main.style.top = headerHeight + "px";
 header.classList.remove("scroll-down");
 let lastScroll = 0;
 
+
+// //random background image
+let backgroundimg = document.getElementById("newhome");
+
+// let randomImage = images[randomNum];
+// let artbackground = document.getElementById("artnewhome");
+
+//
+// artbackground.style.backgroundImage = "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("+randomImage+")";
+let images = ["/arts/1darkpainting.png", "/arts/bridge.jpg", "/arts/cliff.jpg", "/arts/roof.jpg",   "/arts/tower.jpeg",  "/arts/010.jpg", "/arts/RedCottage.jpg"]
+let randomNum = Math.floor(Math.random() * images.length);
+let randomImage = images[randomNum];
 function scrollfunction(e){
     let currentScroll = window.pageYOffset;
     var scrolltotop = document.scrollingElement.scrollTop;
     var target = document.getElementById("newhome");
+
+    target.style.backgroundImage = "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("+randomImage+")";
     var xvalue = "center";
     var factor = .5;
     var yvalue = scrolltotop * factor;

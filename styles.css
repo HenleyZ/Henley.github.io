@@ -116,7 +116,7 @@
 
 }
 .newhome{
-  background-image: url("arts/1darkpainting.png");
+  background: black;
   background-attachment: fixed;
   background-position: top center;
   background-repeat: no-repeat;
@@ -126,6 +126,7 @@
   position: relative;
   width: 100%;
   padding-bottom: 00vh;
+
 
 }
 
@@ -190,7 +191,7 @@ ul{
   color: white;
 }
 
-#artnewhome{
+.artnewhome{
   justify-content: center;
   align-items: center;
   display: flex;
