@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <div class="main">
-        <div class="newhome artnewhome" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/arcadiamap.png)">
-        <h1>Arcadia</h1>
+        <div class="newhome artnewhome" style="background-image:  url(/images/ArcadiaMainScreen.png)">
 
         </div> 
     <meta charset="UTF-8">
@@ -13,6 +12,7 @@
     <link rel="icon" type="image/webp" href="images/lepuff.webp">
     <link rel="stylesheet" href="styles.css">   
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </div>
 </head>
 <body>
 <div id="main"></div>
@@ -51,30 +51,54 @@
 <!-- HERO -->
 <div class="main">
     <div class="main__container">
-        <div class="main__content">
-            <h2>Technical Details</h2>
-            <div class="smallbreak"></div>
-            <iframe width="1060" height="615" src="https://www.youtube.com/embed/h-hqKZcj1wE?si=oQGeVbH7xLlc9Xqd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <div class="break"></div>
-            <h2 style="font-size: 3rem;">Table of Contents</h2>
 
+        <div class="smallbreak"></div>
+
+        <iframe width="1200" height="615" src="https://www.youtube.com/embed/h-hqKZcj1wE?si=oQGeVbH7xLlc9Xqd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+
+    
+    </div>
+
+
+    <div class="newhome artnewhome" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/arcadiamap.png)">
+        <h4 style="color: white;">Technical Details</h4>
+    </div> 
+            
+    <div class="main__container" style="height: 100%; margin-bottom: 10rem;">
+        <h2 style="font-size: 3rem;">Table of Contents</h2>
             <ul class="tableofcontents">
-                <li><a href="#server-authoritative-networking">Server Authoritative Networking System</a></li>
-                <li><a href="#lag-compensation">Custom Lag Compensation Algorithm</a></li>
+                <li><a href="#server-authoritative-networking">Server Authoritative Networking </a></li>
+                <li><a href="#lag-compensation">Lag Compensation Algorithm</a></li>
                 <li><a href="#gun-spray">Gunplay Recoil Algorithm</a></li>
                 <li><a href="#gun-pen">Bullet Hitscan Penetration Algorithm</a></li>
+                <li><a href="#ai">Fun-to-Play-With AI Bots</a></li>
                 <li><a href="#game-framework">Game Framework + Design</a></li>
             </ul>
-            <div class="break"></div>
-        
-            <h1 id="server-authoritative-networking">Server Authoritative Networking System</h1>
-            <div class="smallbreak"></div>
+    </div>
+
+    <div class="newhome artnewhome"  id="server-authoritative-networking" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/dust.png)">
+        <h4 style="color: white;">Server Authoritative Networking System</h4>
+    </div> 
+            
+    
+            
+    <div class="main__container" style="height: auto;">
+    <div class="smallbreak"></div>
             <iframe width="1060" height="615" src="https://www.youtube.com/embed/NdnWYkCvlsQ?si=U8PMF98eH2XAw9Jv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
             <p>The game is networked using a server authoritative system rather than a P2P client-based system. The advantages are that it is much more secure since the client has no authority to change what happens on the server; it only sends requests that the server acts on, preventing many abuses caused by a modified client. However, this style of networking presents many challenges. The client side has to be programmed to preserve responsiveness in movement and shooting, meaning that actions initiated by the player are split into a local instance and a server instance. The server also has to account for lag compensation; otherwise, the validation of a line trace (a fired bullet) has to account for the passage of time between information being sent from the client to the server.</p>
             <img src="https://docs.elympics.cc/images/overview/sa1.png" alt="diagram" width="90%" style="padding:1rem;">
             <div class="break"></div>
-            <h1 id="lag-compensation">Custom Lag Compensation Algorithm</h1>
+    </div>
+    <div id="lag-compensation" class="newhome artnewhome" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/wing.png)">
+        <h4 style="color: white;">Custom Lag Compensation Algorithm</h4>
+    </div> 
+    <div class="main__container" style="height: auto;">
+            <div class="smallbreak"></div>
+
+                    
+            <!-- <h1 id="lag-compensation">Custom Lag Compensation Algorithm</h1> -->
             <p>Everything seemed alright when I booted up the server on my LAN. The game felt fluid and responsive. However, as soon as I tried to connect to a server my friend hosted 1000 miles away, the networking completely fell apart. None of the bullets I fired hit the target; the bullets that seemed to miss resulted in a kill. I did a lot of research into the problem and discovered the issue of lag compensation. This video explains this topic way better than I could.</p>
             
             <iframe width="1060" height="615" src="https://www.youtube.com/embed/6EwaW2iz4iA?si=DnSXCVcKIKMg-LHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -96,16 +120,23 @@
             <iframe width="1060" height="615" src="https://www.youtube.com/embed/OrWSBLe4Uk4?si=A50ibYXv0-lpts9q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
             <div class="break"></div>
+    </div>  
+    <div class="newhome artnewhome"  id="gun-spray" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/mirage.png)">
+        <h4 style="color: white;">Gun Spray Algorithm</h4>
+    </div> 
+    <div class="main__container" style="height: auto;">
 
-            <h1 id="gun-spray">Gun Spray Algorithm</h1>
-            <div class="smallbreak"></div>
+        <div class="smallbreak"></div>
 
+            
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/phR9gfwe0no?si=A1-u3sbPsXerUs9b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
+        <div class="smallbreak"></div>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/phR9gfwe0no?si=A1-u3sbPsXerUs9b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <div class="smallbreak"></div>
             <p>I designed this algorithm through a lot of playtesting and trial and error. Heres how it works. </p>
-            <div class="smallbreak"></div>
-            <div class="container">  
+
+        <div class="smallbreak"></div>
+        <div class="container">  
                 <ol>
                     <li>There is an internal heat variable, which is stored on the client and the server as two different versions. The client variables are separated from the server to maintain the spray even in poor network conditions.</li>
                     <li>When a weapon is fired, the heat variable is increased by a certain amount depending on the characteristics of the weapon. For example, SMGs have a higher heat growth multiplier compared to silenced weapons.</li>
@@ -117,18 +148,37 @@
                     <li>Any amount of crosshair movement recoil is added to a local variable. When the player stops shooting, the amount of this local variable is used to return the crosshair to the original location. This also takes FPS into account.</li>
                     <li>The whole time, the heat variable decays, depending on the characteristics of the weapon.</li>
                 </ol>
-            </div>
-            <div class="smallbreak"></div>
-            <p>All this complexity allows the spray pattern to follow a consistent characteristic T-shaped pattern found in Valorant and CSGO. The numerous ways spray can be adjusted allow for easy modifications to weapons.</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/SiaqWkY_zPo?si=vYdQbtAZGK6zsTvp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <div class="break"></div>
-
-            <h1 id="gun-pen">Hitscan Bullet Penetration Algorithm</h1>
-            <h1>website WIP</h1>
         </div>
         
-        </div>
+        <div class="smallbreak"></div>
+        
+            <p>All this complexity allows the spray pattern to follow a consistent characteristic T-shaped pattern found in Valorant and CSGO. The numerous ways spray can be adjusted allow for easy modifications to weapons.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SiaqWkY_zPo?si=vYdQbtAZGK6zsTvp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+            <div class="break"></div>
     </div>
+    <div class="newhome artnewhome"  id="gun-pen" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/penn.png)">
+        <h4 style="color: white;">Hitscan Bullet Penetration Algorithm</h4>
+    </div> 
+    <div class="main__container" style="height: auto;">
+            <div class="smallbreak"></div>
+            <img src="/images/penetration.png" alt="bullet penetration diagram">
+            <div class="smallbreak"></div>
+
+            <div class="container">  
+                <ol>
+                    <li>The initial line trace is performed (red). When the line trace hits an object, the penetration function is called.</li>
+                    <li>The penetration function performs a depth check line trace (blue). The length of this line trace is determined by the penetration value of the shot.</li>
+                    <li>If the depth check line trace hits an object, it means that the bullet is capable of penetrating to the other side of the object.</li>
+                    <li>The penetration function then performs a final line trace (blue) from the hit location of the depth check line trace to the original line trace hit location.</li>
+                    <li>This final line trace's penetration and damage are reduced based on the length of the depth check line trace, which indicates how much of the bullet's power is reduced.</li>
+                    <li>This line trace does the usual lag-compensated check for a player hit. It also recursively calls the penetration function when this line trace hits an object.</li>
+                    <li>The recursion stops when the penetration value is insufficient to penetrate the following object. There are recursion limits in place to stop infinite loops.</li>
+                </ol>
+            </div>
+        </div>
+        
+        
 </div>
 
 

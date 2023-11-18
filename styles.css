@@ -366,10 +366,10 @@ a{
   width: 100%;
   max-width: 1500px;
   padding-left: 100px;
-  padding-right: 75px;
+  padding-right: 100px;
 }
 
-.main__content h1 {
+ h1 {
   font-size: 4rem;
   font-weight: 300;
   background-color: #ff8177;
@@ -384,7 +384,14 @@ a{
   transition: background-image 1s;
 }
 
-.main__content h2 {
+h4 {
+  font-size: 4rem;
+  font-weight: 300;
+  color: white;
+  display: flex;
+  transition: background-image 1s;
+}
+h2 {
   font-size: 5rem;
   font-weight: 300;
   background-color: #ff8177;
