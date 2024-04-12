@@ -630,19 +630,19 @@ font-size: 3rem;
   color: #fff;
   font-size: 1em;
 }
-.timeline div:nth-child(even) {
+.timeline div:nth-child(odd) {
   border-right: 3px solid;
   padding-left: 0;
 }
-.timeline div:nth-child(even):before {
+.timeline div:nth-child(odd):before {
   left: 100%;
   margin-left: -20px;
 }
-.timeline div:nth-child(odd) {
+.timeline div:nth-child(even) {
   border-left: 3px solid;
   padding-right: 0;
 }
-.timeline div:nth-child(odd):before {
+.timeline div:nth-child(even):before {
   right: 100%;
   margin-right: -20px;
 }
