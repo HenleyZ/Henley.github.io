@@ -6,7 +6,7 @@ const headerHeight = document.querySelector("nav").offsetHeight;
 main.style.top = headerHeight + "px";
 header.classList.remove("scroll-down");
 let lastScroll = 0;
-
+let opacity = 1;
 
 // //random background image
 let backgroundimg = document.getElementById("newhome");
@@ -23,14 +23,16 @@ function scrollfunction(e){
     let currentScroll = window.pageYOffset;
     var scrolltotop = document.scrollingElement.scrollTop;
     var target = document.getElementById("newhome");
-
-    target.style.backgroundImage = "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("+randomImage+")";
+    if (opacity> 0.5){
+        opacity -= 0.01;
+    }
+    target.style.backgroundImage = "linear-gradient( rgba(0, 0, 0, "+opacity+"), rgba(0, 0, 0, "+opacity+") ), url("+randomImage+")";
     var xvalue = "center";
     var factor = .5;
     var yvalue = scrolltotop * factor;
     target.style.backgroundPosition = xvalue + " -" + yvalue + "px";
-    console.log("current: ", currentScroll);
-    console.log("last: ", lastScroll);
+    // console.log("current: ", currentScroll);
+    // console.log("last: ", lastScroll);
     if(window.location.pathname == "/arts.html"){
         return
     }
@@ -82,9 +84,41 @@ window.addEventListener("scroll", function(){
 });
 
 
+
+
 window.onload = function(e) {
     scrollfunction(true);
+    //call scrollfunction 50 times with 0.01 seconds interval
+    for (var i = 50; i < 100; i++) {
+        setTimeout(scrollfunction, i * 20);
+    }
   };
-  $(window).load(function() {
-    $("body").removeClass("preload");
-  });
+//   $(window).load(function() {
+//     $("body").removeClass("preload");
+//   });
+
+// //load image slowly
+//   $(document).ready(function() {
+//     window.onload = function() {$('.fade_img').hide().fadeIn(1000);};
+//   });
+
+
+
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    console.log(galleryItems);
+
+    const fullscreenOverlay = document.getElementById('fullscreen-overlay');
+    const fullscreenImage = document.querySelector('#fullscreen-image img');
+    const closeButton = document.getElementById('close-button');
+  
+    galleryItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        console.log('Gallery item clicked');
+        fullscreenImage.src = item.querySelector('img').src;
+        fullscreenOverlay.style.display = 'flex';
+      });
+    });
+  
+    closeButton.addEventListener('click', () => {
+      fullscreenOverlay.style.display = 'none';
+    });
