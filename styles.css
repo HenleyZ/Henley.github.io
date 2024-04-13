@@ -959,3 +959,13 @@ h3{
   }
 }/*# sourceMappingURL=styles.css.map */
 
+
+#artscolor{
+  width: 50%;
+  transition: filter 20s;
+  filter:  hue-rotate(1360deg);
+}
+
+#artscolor:hover{
+  filter:  hue-rotate(1360deg);
+}
