@@ -778,6 +778,10 @@ h3{
 .newhome{
   display: block;
 }
+
+.artnewhome{
+  display: inline;
+}
 .newhome div{
   height: 40%;
   width: auto;
@@ -957,8 +961,18 @@ h3{
     grid-gap: 10px;
     padding: 10px;
   }
+
+
+
+  .arcadia__container{
+   max-width: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */
 
+.arcadia_container{
+  max-width:850px;
+  padding: 50px;
+}
 
 #artscolor{
   width: 50%;
@@ -968,4 +982,11 @@ h3{
 
 #artscolor:hover{
   filter:  hue-rotate(1360deg);
+}
+
+
+ol li {
+  font-size: 1.25rem;
+  font-weight: 100;
+  
 }
