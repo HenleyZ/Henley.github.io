@@ -143,15 +143,15 @@
 .newhome img {
   width: 120vh;
   opacity: 100%;
-  transition: filter 20s;
-  filter: invert(21%) sepia(100%) saturate(200%) hue-rotate(200deg) brightness(100%) contrast(117%)
+ 
+  filter: invert(21%) sepia(100%) saturate(200%) hue-rotate(200deg) brightness(300%) contrast(1107%)
 }
 
-.newhome img:hover{
+/* .newhome img:hover{
 opacity: 100;
 filter: invert(21%) sepia(100%) saturate(200%) hue-rotate(1360deg) brightness(100%) contrast(117%);
 
-}
+} */
 h1{
   color: white;
   font-size: 6rem;
@@ -424,20 +424,21 @@ h2 {
 #about {
   padding-top: 1rem;
   font-size: 1.5rem;
+  width: 100%;
 
 }
 
 #Home {
   margin-top: 6rem;
+  width: 50%;
 }
 
 .home__container {
   display: flex;
-  height: 50rem;
+  justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
-  margin-top: 1rem;
-  margin-left: 3rem;
+
 }
 nav.scroll-up{
   transform: translateY(-100%);
@@ -450,12 +451,10 @@ nav.scroll-down{
 #selfie {
   object-fit: cover;
   border-radius: 10px;
-  margin-left: 10rem;
-  margin-top: 1rem;
-  max-width: 250px;
-  max-height: 600px;
   width: auto;
-  height: auto;
+  max-height: auto;
+  display: flex;
+
 }
 
 .button {
@@ -510,10 +509,12 @@ nav.scroll-down{
   justify-content: space-between;
   width: 400px;
   list-style: none;
+  justify-self: center;
 }
 
 .contact__items{
   display: flex;
+
 }
 
 .contact__items img{
@@ -806,12 +807,17 @@ h3{
 }
 .contact__bar{
   margin-top: 4rem;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  justify-content: center;
   width: 100%;
   list-style: none;
 }
 
+.contact__items{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 .project__list{
   display: block;
 }
@@ -914,15 +920,21 @@ h3{
   }
   .home__container {
     margin-bottom: 1rem;
-    margin-top: 10rem;
-    width: 100%;
+
+    width:80%;
     display: block;
-    margin: 1rem;
+    margin: 0rem;    margin-top: 5rem;
+    justify-self: center;
+    justify-items: space-between;
+
   }
   #Home {
     margin-top: 1%;
-    width: 90%;
+    width: 100%;
+    justify-self: center;
   }
+
+   
   #selfie {
     margin-top: 5rem;
     margin-left:1rem;
@@ -966,6 +978,10 @@ h3{
 
   .arcadia__container{
    max-width: 100%;
+  }
+
+  #Home a{
+    justify-items:auto;
   }
 }/*# sourceMappingURL=styles.css.map */
 
